@@ -16,6 +16,11 @@ app.get( '/', ( req, res ) => {
 
 io.of( '/stream' ).on( 'connection', stream );
 
-server.listen(3000, () => {
-    console.log("Server running successfully at PORT 3000"
-)} );
+server.listen(3000, (err) => {
+    if (err) {
+        console.log(err)
+    }
+    else {
+        console.log("Server running successfully at PORT 3000")
+    }
+} );
